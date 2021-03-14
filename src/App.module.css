@@ -1,0 +1,72 @@
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  
+  100% {
+    opacity: 1;
+  }
+}
+
+.main_button {
+  align-self: start;
+  background-color: #6082a3;
+  font-size: 20px;
+  margin-bottom: 30px;
+  margin-left: 10px;
+  transition: background-color 0.5s ease;
+  width: 250px;
+}
+
+.main_button:focus,
+.main_button:hover {
+  filter: none;
+}
+
+.main_button_cancel {
+  background-color: #F26065;
+}
+
+.main_button path {
+  animation: show 0.7s ease;
+  fill: #6082a3;
+}
+
+.main_button_cancel path {
+  animation: show 0.7s ease;
+  fill: #F26065;
+}
+
+.title {
+  color: #ffffff;
+  text-shadow: 0 0 7px #6082a3;
+  font-size: 45px;
+  margin-bottom: 40px;
+}
+
+@media only screen  and (max-width: 720px) {
+  .title {
+    font-size: 35px;
+  }
+
+  .main_button {
+    font-size: 15px;
+  }
+}
+
+@media only screen  and (max-width: 460px) {
+
+  .title {
+    align-self: center;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  .main_button {
+    width: 100%;
+    margin-left: 0;
+    align-self: stretch;
+    margin-bottom: 15px;
+  }
+
+}
