@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import style from "./App.module.css";
 import BookList from "./components/BooksList/BookList";
+import BookEditor from "./components/BookEditor/BookEditor";
 import CustomButton from "./componentsHelper/CustomButton/CustomButton";
 import { ReactComponent as Book } from "./assets/img/book.svg";
 import { ReactComponent as Cancel } from "./assets/img/cancel.svg";
@@ -24,7 +25,7 @@ function App() {
       </CustomButton>
 
       {isEdit ? (
-        <div>fff</div> //<BookEditor toggleEditor={toggleEditor} />
+        <BookEditor toggleEditor={toggleEditor} />
       ) : (
         <BookList toggleEditor={toggleEditor} />
       )}

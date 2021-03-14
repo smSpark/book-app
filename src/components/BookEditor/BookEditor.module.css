@@ -1,0 +1,75 @@
+@keyframes show {
+  0% {
+    opacity: 0;
+    transform: translate(-20%, 0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  padding: 30px;
+  background-color: white;
+  /* box-shadow: 0 11px 27px 0 rgba(78, 160, 237, 0.2); */
+  animation: show 0.5s ease;
+}
+
+.wrapper:after,
+.wrapper:before {
+  position: absolute;
+  content: " ";
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -2;
+}
+
+.wrapper::after {
+  box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+  
+.wrapper::before {
+  box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2);
+}
+
+.title {
+  margin-bottom: 20px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.button_cancel {
+  background-color: #6082a3;
+}
+
+.button_cancel path {
+  fill: #6082a3;
+}
+
+.button_save {
+  margin: 0 15px;
+  background-color: #89c4fc;
+}
+
+.button_save path {
+  fill: #89c4fc;
+}
+
+@media only screen  and (max-width: 460px) {
+  .buttons {
+    flex-direction: column;
+  }
+
+  .button_save {
+    margin: 0 0 20px 0;
+  }
+}
